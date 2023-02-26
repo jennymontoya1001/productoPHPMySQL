@@ -64,6 +64,7 @@
        <th>DESCRIPCIÓN</th>
        <th>TIPO</th>
        <th>IMAGEN</th>
+       <th>ACCIÓN</th>
     </thead>
     <tbody>
 
@@ -77,7 +78,9 @@
                             <td><?php  echo $row['PRECIO']?></td>    
                             <td><?php  echo $row['DESCRIPCION']?></td>    
                             <td><?php  echo $row['TIPO']?></td> 
-                            <td><img class="imagen" src="<?php  echo $row['IMAGEN']?>"/>   </td>                               
+                            <td><img class="imagen" src="<?php  echo $row['IMAGEN']?>"/>   </td>  
+                            <th><a href="actualizar.php?id=<?php echo $row['CODIGO'] ?>" class="btn btn-info">Editar</a></th>
+                            <th><a href="delete.php?id=<?php echo $row['CODIGO'] ?>" class="btn btn-danger">Eliminar</a></th>                              
                         </tr>
                 <?php 
                      }
